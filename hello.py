@@ -19,6 +19,10 @@ def index():
         {
             'title': {'main': 'I love C#', 'sub': 'this is a neutral story'},
             'body': 'C# can do something, and it is very easy.'
+        },
+        {
+            'title': {'main': 'I hate C#', 'sub': 'this is a neutral story'},
+            'body': 'C# cannot do anything, and it is stupid!'
         }
     ]
 
