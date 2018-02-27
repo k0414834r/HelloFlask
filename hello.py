@@ -26,6 +26,6 @@ def index():
         }
     ]
 
-    return render_template('index.html', user = user1, posts = posts)
+    return render_template('index.html', user = user1, posts = posts, title = "HelloFlask")
 
 app.run()
