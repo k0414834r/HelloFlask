@@ -7,10 +7,9 @@
     <body>
         <h1>Hello, {{user.username}}!</h1>
 
-        {{posts}}
-
-            <div><H1>{{ posts[0].title.main }}</H1> {{ posts[0].body }}</div>
-            <div><H1>{{ posts[1].title.main }}</H1> {{ posts[1].body }}</div>
+        {% for post in posts %}
+        <div><H1>{{ post.title.main }}</H1> {{ post.body }}</div>
+        {% endfor %}
 
     </body>
 </html>
