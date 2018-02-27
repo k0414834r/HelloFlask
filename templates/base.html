@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        {% if title %}
+        <title>{{ title }} - !</title>
+        {% else %}
+        <title>Welcome!</title>
+        {% endif %}
+    </head>
+    <body>
+        <div><a href="/index">Home</a></div>
+        <div><a href="/store">Store</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
