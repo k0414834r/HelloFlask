@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Store</title>
-</head>
-<body>
-    <div><a href="/index">Home</a></div>
-This is the store page.
-I got some items: {{ items }}
+    <head>
+        <meta charset="UTF-8">
+        <title>Store</title>
+    </head>
+    <body>
+        <div><a href="/index">Home</a></div>
+        <hr>
 
-    {% for item in items %}
-    <div><H1>{{ item.title }}</H1> {{ item.price }}</div>
-    {% endfor %}
+        This is the store page.
+        I got some items: {{ items }}
 
-</body>
+        {% for item in items %}
+        <div><H1>{{ item.title }}</H1> {{ item.price }}</div>
+        {% endfor %}
+
+    </body>
 </html>
