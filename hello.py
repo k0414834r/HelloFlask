@@ -1,6 +1,8 @@
 from flask import Flask, render_template
+from forms import LoginForm
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'RNG'
 
 @app.route('/')
 @app.route('/index')
@@ -32,7 +34,7 @@ def index():
 def store():
     items = [
         {
-            'title': "Python book",
+             'title': "Python book",
             'price': 200
         },
         {
@@ -50,5 +52,10 @@ def store():
     ]
 
     return render_template('store.html', items = items)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    return render_template('login.html', title = 'Sign In', form = form)
 
 app.run()
