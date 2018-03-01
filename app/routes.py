@@ -1,8 +1,7 @@
 from app import app2 as app
 from app.forms import LoginForm
 from flask import Flask, render_template, flash, redirect
-
-from app import Post
+from app.models import Post
 
 @app.route('/')
 @app.route('/index')
