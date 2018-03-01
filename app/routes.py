@@ -1,4 +1,4 @@
-from app import app2 as app
+from app import app2 as app, db
 from app.forms import LoginForm, RegistrationForm
 from flask import Flask, render_template, flash, redirect, url_for
 from flask_login import current_user, login_user, logout_user
