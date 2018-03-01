@@ -12,8 +12,16 @@
     <body>
         <div><a href="/index">Home</a></div>
         <div><a href="/store">Store</a></div>
-        <div><a href="/login">Login</a></div>
+
+        {% if current_user.is_anonymous %}
+        <a href="{{ url_for('login') }}">Login</a>
+        {% else %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+        <div>Hello, {{current_user.username}}!</div>
+        {% endif %}
+
         <hr>
+
         <div>
            {% with messages = get_flashed_messages() %}
                {% if messages %}
