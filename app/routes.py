@@ -61,4 +61,4 @@ def logout():
 
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
-    pass
+    return "You have been registered"
